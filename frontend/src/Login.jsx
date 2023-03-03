@@ -17,7 +17,7 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import SweetAlert from 'react-bootstrap-sweetalert'
 import axios from './axios'
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import { loginUser } from './LoginRedux/loginActions.js'
@@ -76,7 +76,7 @@ function Login(props) {
     };
   }
 
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
 
   const [value, setValue] = useState(0);
 
@@ -147,7 +147,7 @@ function Login(props) {
     else if (statusLogin == 'success') {
       setAlert(null)
       props.loginUser()
-      // navigate('/')
+      navigate('/')
     }
 
   }, [statusLogin])
@@ -235,7 +235,7 @@ function Login(props) {
   }
 
   return (
-    <div className='login' style={{ height: '100vh', background: `URL('https://cdn.wallpapersafari.com/73/33/P9b2gR.jpg') center/cover` }}>
+    <div className='login' style={{ height: '100vh', background: `URL('https://wallpaper.dog/large/20358703.jpg') center/cover` }}>
       {
         alertStatus && alert
       }
