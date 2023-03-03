@@ -23,12 +23,7 @@ import * as yup from 'yup'
 import { loginUser } from './LoginRedux/loginActions.js'
 import { connect } from 'react-redux'
 import {Form } from 'react-bootstrap'
-// import PersonIcon from '@mui/icons-material/Person';
-// import Avatar from '@mui/material/Avatar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import ButtonBootstrap from 'react-bootstrap/Button'; //custom name given by me 
-// import Tooltip from '@mui/material/Tooltip';
-// import { InputGroup, FormControl } from 'react-bootstrap';
 import { styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import Paper from '@mui/material/Paper';
