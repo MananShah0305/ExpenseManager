@@ -15,6 +15,8 @@ import { logoutUser } from './LoginRedux/loginActions.js'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
+let tab='dashboard'
+
 function Navbar(props) {
 
     let navigate = useNavigate();
@@ -57,7 +59,7 @@ function Navbar(props) {
                     width='14vw'
                 >
                     <Tooltip title="Home" placement="bottom">
-                        <Link to="/dashboard">
+                        <Link to="/dashboard" onClick={tab='dashboard'}>
                             <IconButton>
                                 <HomeOutlinedIcon style={{ fontSize: '33px', color: '#4181f6' }}></HomeOutlinedIcon>
                             </IconButton>
@@ -65,7 +67,7 @@ function Navbar(props) {
                     </Tooltip>
                     <Tooltip title="Settings" placement="bottom">
                         <Link to="/settings">
-                            <IconButton>
+                            <IconButton onClick={tab='settings'}>
                                 <SettingsOutlinedIcon style={{ fontSize: '30px', color: '#4181f6' }}></SettingsOutlinedIcon>
                             </IconButton>
                         </Link>
@@ -79,6 +81,8 @@ function Navbar(props) {
     )
 }
 
+export {tab}
+
 const mapStateToProps = (state) => {
     return {
         username: state.username,
@@ -91,5 +95,5 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default React.memo(connect(mapStateToProps, mapDispatchToProps)(Navbar))
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
 
