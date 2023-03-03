@@ -48,7 +48,7 @@ function Navbar(props) {
                 alignItems="center"
                 spacing={4}
             >
-                <p className='fontFace' style={{ fontSize:'24px',margin:'0px' ,fontWeight: 'bold',width:'80vw' }}>Welcome Manan{userInfo.username}</p>
+                <p className='fontFace' style={{ fontSize: '30px', marginBottom: '8px', fontWeight: 'bold', width: '80vw' }}>Welcome Manan{userInfo.username}!</p>
                 <Stack
                     direction="row"
                     justifyContent="space-between"
@@ -57,7 +57,7 @@ function Navbar(props) {
                     width='14vw'
                 >
                     <Tooltip title="Home" placement="bottom">
-                        <Link to="/">
+                        <Link to="/dashboard">
                             <IconButton>
                                 <HomeOutlinedIcon style={{ fontSize: '33px', color: '#4181f6' }}></HomeOutlinedIcon>
                             </IconButton>
@@ -70,11 +70,9 @@ function Navbar(props) {
                             </IconButton>
                         </Link>
                     </Tooltip>
-                    <Link to='/login'>
-                        <Button variant="contained" endIcon={<LogoutIcon />}>
-                            Logout
-                        </Button>
-                    </Link>
+                    <Button variant="contained" endIcon={<LogoutIcon />} onClick={logoutSite}>
+                        Logout
+                    </Button>
                 </Stack>
             </Stack>
         </div>
@@ -93,5 +91,5 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
+export default React.memo(connect(mapStateToProps, mapDispatchToProps)(Navbar))
 
