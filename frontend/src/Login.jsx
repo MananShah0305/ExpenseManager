@@ -147,7 +147,7 @@ function Login(props) {
     else if (statusLogin == 'success') {
       setAlert(null)
       props.loginUser()
-      navigate('/')
+      navigate('/dashboard')
     }
 
   }, [statusLogin])
