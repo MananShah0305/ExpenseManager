@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '@mui/material/Button';
+import Button from '@mui/material-next/Button';
 import EastIcon from '@mui/icons-material/East';
 import Stack from '@mui/material/Stack';
 import './LandingPage.css'
@@ -19,7 +19,7 @@ export default function LandingPage() {
                         Expense Tracker
                     </p>
                     <Link to='/login'>
-                        <Button variant="contained" endIcon={<EastIcon />}>
+                        <Button color="primary" variant="filled" size="medium" endIcon={<EastIcon />}>
                             Login
                         </Button>
                     </Link>

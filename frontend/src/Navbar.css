@@ -3,6 +3,7 @@
     box-shadow: 3px 3px 8px grey;
     position: sticky;
     top:0px;
+    z-index:1;
     background: url('https://garden.spoonflower.com/c/14410113/p/f/m/Uy9afoBDSKvDV-ikZ_KJgqgyC8GLXV2R3dBpJOJzJZwc2ffD9hVP/San%20Mateo%20Beaches%20924%20f5e4bf%20Solid%20Color%20Benjamin%20Moore%20Classic%20Colours.jpg');
 }
 

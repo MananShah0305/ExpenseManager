@@ -277,7 +277,7 @@ function Login(props) {
                     ),
                   }} />
 
-                <p style={{ margin: '-20px 0px 0px -40px', fontSize:'14px'}} ><Button color="primary" size="small">Forgot password?</Button>Change it now</p>
+                {/* <p style={{ margin: '-20px 0px 0px -40px', fontSize:'14px'}} ><Button color="primary" size="small">Forgot password?</Button>Change it now</p> */}
 
                 <Button type='submit' style={{ padding: '10px' }} onClick={loginSubmit} variant="contained" endIcon={<LoginIcon />} fullWidth>
                   Log In
