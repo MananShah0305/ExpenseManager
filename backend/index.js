@@ -4,6 +4,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import loginRouter from './Routes/LoginRoutes.js'
 import expenseRouter from './Routes/expenseRoutes.js'
+import categoryRouter from './Routes/categoryRoutes.js'
 
 dotenv.config()
 
@@ -30,3 +31,4 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use('/', loginRouter) 
 app.use('/', expenseRouter) 
+app.use('/', categoryRouter) 

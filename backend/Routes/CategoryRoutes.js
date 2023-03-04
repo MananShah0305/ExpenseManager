@@ -1,10 +1,14 @@
 import express from 'express'
-import { getExpenseInfo,postExpense } from '../Controllers/ExpenseController.js'
+import { getCategoryInfo,postCategory,updateCategory,deleteCategory } from '../Controllers/CategoryController.js'
 
 const router = express.Router()
 
-router.route('/expense').get(getExpenseInfo)
+router.route('/category').get(getCategoryInfo)
 
-router.route('/expense').post(postExpense)
+router.route('/category').post(postCategory)
+ 
+router.route('/category').patch(updateCategory)
+
+router.route('/category').delete(deleteCategory)
 
 export default router
