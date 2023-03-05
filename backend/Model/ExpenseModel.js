@@ -5,6 +5,7 @@ const expenseSchema = new mongoose.Schema({
     expense_name: String,
     expense_amount: Number,
     expense_type: String,
+    deleted:Boolean
 },{collection:'expense-data'})
 
 const expenseModel = mongoose.model('Expense', expenseSchema)
